@@ -68,7 +68,7 @@ Vue.component('cart', {
             :img="imgCart"
             @remove="remove">
             </cart-item>
-            <p class="cart-block-total">Total: {{ calculateCart() }}</p>
+            <p class="cart-block-total">Total: {{  }}</p>
         </div>
     </div>
     `
