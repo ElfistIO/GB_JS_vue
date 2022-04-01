@@ -1,0 +1,17 @@
+{
+  "name": "gb_online_store_vue",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.3",
+    "fs": "0.0.1-security",
+    "nodemon": "^2.0.15"
+  },
+  "main": "./server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

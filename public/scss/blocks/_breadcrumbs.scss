@@ -1,0 +1,27 @@
+.breadcrumbs {
+  background-color: #f8f3f4;
+  .breadcrumbs__box {
+    max-width: $width-site;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 29px;
+    color: #f16d7f;
+    text-transform: uppercase;
+    padding: 60px 0;
+  }
+  .breadcrumbs__box-catalog {
+    display: flex;
+    justify-content: space-between;
+    .breadcrumbs__link {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #636363;
+    }
+    .breadcrumbs__link-pink {
+      text-decoration: none;
+      color: #f16d7f;
+      font-weight: 700;
+    }
+  }
+}

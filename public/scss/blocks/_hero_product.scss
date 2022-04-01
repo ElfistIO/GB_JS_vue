@@ -1,0 +1,20 @@
+.hero__product {
+  display: flex;
+  height: 777px;
+  background: #f7f7f7;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 600px;
+  .hero__product-left {
+    height: 23px;
+    width: 13px;
+    background: rgba(42, 42, 42, 0.15);
+    padding: 12px 17px;
+  }
+  .hero__product-right {
+    height: 23px;
+    width: 13px;
+    background: rgba(42, 42, 42, 0.15);
+    padding: 12px 17px;
+  }
+}
