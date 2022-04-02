@@ -48,7 +48,7 @@
     .nav__menu__search-link {
       background-color: transparent;
       position: absolute;
-      display: none;
+      
     }
     .nav__menu__search-link::before {
       content: "";
@@ -59,11 +59,11 @@
       left: 4px;
       width: 27px;
       height: 28px;
-      background-image: url(image/search.svg);
+      background-image: url(../image/search.svg);
     }
     .nav__menu__search-link-placeholder::placeholder {
       display: flex;
-      padding-left: 30px;
+      padding-left: 20px;
     }
     .display-block {
       display: block;

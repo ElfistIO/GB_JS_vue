@@ -4,11 +4,9 @@ Vue.component('search',{
             userSearch: ''
         }
     },
-    template: `<form action="#" class="search-form" @submit.prevent="$parent.$refs.products.filter(userSearch)">
-                    <input type="text" class="search-field" v-model="userSearch">
-                    <button class="btn-search" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
+    template: `<form action="#" class="nav__menu__search-link" @submit.prevent="$parent.$refs.products.filter(userSearch)">
+                <label class="search-label visually-hidden" for="search">search</label>  
+                <input type="search" placeholder="Search..." class="nav__menu__search-link-placeholder" v-model="userSearch">
                 </form>
 `
 })
