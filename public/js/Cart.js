@@ -1,7 +1,7 @@
 Vue.component('cart', {
     data(){
         return {
-            imgCart: '../image/product_1.png',
+            
             cartUrl: '/getBasket.json',
             cartItems: [],
             show: false,
@@ -33,11 +33,17 @@ Vue.component('cart', {
                     }
                 })
         },
-        calculateCart() {
+        calculateCartPrice() {
             let cartPrice = 0;
-            let cart = this.$parent.cartItems;
-            cart.forEach(el => cartPrice += el.quantity * el.price)
+            let cart = this.cartItems[1];
+            cart.forEach(el => cartPrice += el.quantity * el.price);
             return cartPrice;
+        },
+        calculateCartQuantity() {
+            let cartQuantity = 0;
+            let cart = this.cartItems[1];
+            cart.forEach(el => cartQuantity += el.quantity);
+            return cartQuantity;
         },
     },
     mounted(){
@@ -57,7 +63,7 @@ Vue.component('cart', {
         </button>
         <div class="nav__menu-item-nr">
             <!-- number of items -->
-            <span>5</span>
+            <span>{{  }}</span>
         </div>
         <div class="cart-block" v-show="show">
             <p v-if="!cartItems.length" class="cart-emty">Cart is emty!</p>
@@ -65,20 +71,19 @@ Vue.component('cart', {
             v-for="item of cartItems" 
             :key="item.id_product"
             :cart-item="item" 
-            :img="imgCart"
             @remove="remove">
             </cart-item>
-            <p class="cart-block-total">Total: {{  }}</p>
+            <p v-if='!cartItems.length' class="cart-block-total">Total: {{  }}</p>
         </div>
     </div>
     `
 })
 
 Vue.component('cart-item', {
-    props: ['cartItem', 'img'],
+    props: ['cartItem'],
     template: `
     <div class="cart-item">
-        <img src="./image/product_1.png" class="cart-img"/>
+        <img :src="cartItem.img" class="cart-img"/>
         <div class="cart-text">
             <h3>{{ cartItem.product_name }}</h3>
             <p>{{ cartItem.price }} $</p>

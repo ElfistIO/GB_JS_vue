@@ -36,7 +36,7 @@ Vue.component('product',{
     props: ['product'],
     template: `
     <div class="products__card">
-        <img src="image/product_1.png" alt="product_1" class="products__card-img">
+        <img :src="product.img" alt="product_1" class="products__card-img">
         <div class="products__card-img-shadow">
             <button href="#" class="products__add-to-cart" @click="$root.$refs.cart.addProduct(product)"><img src="image/cart.svg" alt="cart" class="products__add-to-cart-img-margin"> Add to Cart</button>
         </div>
