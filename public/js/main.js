@@ -4,6 +4,7 @@ const app = new Vue({
     el: '#app',
     data: {
         userSearch: '',
+        showSearch: false
     },
     methods: {
         getJson(url){
@@ -51,5 +52,6 @@ const app = new Vue({
         },
     },
     mounted() {
+        
     }
 });

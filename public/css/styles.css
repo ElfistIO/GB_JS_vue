@@ -237,7 +237,6 @@ body {
 .nav .nav__container .nav__menu__search-link {
   background-color: transparent;
   position: absolute;
-  display: none;
 }
 
 .nav .nav__container .nav__menu__search-link::before {
@@ -249,32 +248,32 @@ body {
   left: 4px;
   width: 27px;
   height: 28px;
-  background-image: url(image/search.svg);
+  background-image: url(../image/search.svg);
 }
 
 .nav .nav__container .nav__menu__search-link-placeholder::-webkit-input-placeholder {
   display: -webkit-box;
   display: flex;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .nav .nav__container .nav__menu__search-link-placeholder:-ms-input-placeholder {
   display: -ms-flexbox;
   display: flex;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .nav .nav__container .nav__menu__search-link-placeholder::-ms-input-placeholder {
   display: -ms-flexbox;
   display: flex;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .nav .nav__container .nav__menu__search-link-placeholder::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .nav .nav__container .display-block {
