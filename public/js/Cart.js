@@ -1,10 +1,10 @@
 Vue.component('cart', {
     data(){
         return {
-            
             cartUrl: '/getBasket.json',
             cartItems: [],
             show: false,
+            cartQuantity: 0
         }
     },
     methods: {
@@ -39,11 +39,11 @@ Vue.component('cart', {
             cart.forEach(el => cartPrice += el.quantity * el.price);
             return cartPrice;
         },
+    },
+    computed: {
         calculateCartQuantity() {
-            let cartQuantity = 0;
-            let cart = this.cartItems[1];
-            cart.forEach(el => cartQuantity += el.quantity);
-            return cartQuantity;
+            this.cartItems.contents.forEach(el => this.cartQuantity += el.quantity);
+            return this.cartQuantity;
         },
     },
     mounted(){
